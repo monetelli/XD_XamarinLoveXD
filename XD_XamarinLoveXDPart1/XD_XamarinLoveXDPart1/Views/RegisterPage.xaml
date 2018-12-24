@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ViewModel="clr-namespace:XD_XamarinLoveXDPart1.ViewModels"
+             xmlns:Custom="clr-namespace:XD_XamarinLoveXDPart1.Customs"
+             x:Class="XD_XamarinLoveXDPart1.Views.RegisterPage"
+             NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.BindingContext>
+        <ViewModel:MainViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <Grid>
+            <Image Source="backgroundMainImage.png"
+                   Aspect="AspectFill"/>
+            <ScrollView>
+                <StackLayout Padding="16,0,16,0">
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Image Grid.Row="0"
+                               Source="iconLoginDerivation.png"
+                               WidthRequest="211"
+                               Margin="0,7,0,0"/>
+
+                        <StackLayout Grid.Row="1"
+                                     Margin="0,12,0,0"
+                                     Spacing="15">
+                            <StackLayout Spacing="9">
+                                <Label Text="Full Name"
+                                       TextColor="#F4F1F2"
+                                       FontSize="17"/>
+                                <Custom:SimpleCustomEntry PlaceholderColor="#F4F1F2"
+                                                          TextColor="#F4F1F2"
+                                                          FontSize="16"/>
+                            </StackLayout>
+                            <StackLayout Spacing="9">
+                                <Label Text="Email:"
+                                       TextColor="#F4F1F2"
+                                       FontSize="17"/>
+                                <Custom:SimpleCustomEntry PlaceholderColor="#F4F1F2"
+                                                          TextColor="#F4F1F2"
+                                                          FontSize="16"/>
+                            </StackLayout>
+                            <StackLayout Spacing="9">
+                                <Label Text="Password:"
+                                       TextColor="#F4F1F2"
+                                       FontSize="17"/>
+                                <Custom:SimpleCustomEntry PlaceholderColor="#F4F1F2"
+                                                          TextColor="#F4F1F2"
+                                                          FontSize="16"/>
+                            </StackLayout>
+                            <StackLayout Spacing="9">
+                                <Label Text="Confirm password:"
+                                       TextColor="#F4F1F2"
+                                       FontSize="17"/>
+                                <Custom:SimpleCustomEntry PlaceholderColor="#F4F1F2"
+                                                          TextColor="#F4F1F2"
+                                                          FontSize="16"/>
+                            </StackLayout>
+
+                        </StackLayout>
+
+                        <Custom:SimpleCustomButton Grid.Row="2"
+                                                   x:Name="btnREGISTER"
+                                                   Text="REGISTER"
+                                                   TextColor="#F4F1F2"
+                                                   FontSize="16"
+                                                   Margin="71,26,71,0"
+                                                   Command="{Binding RegisterInformationCommand}"/>
+                    </Grid>
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

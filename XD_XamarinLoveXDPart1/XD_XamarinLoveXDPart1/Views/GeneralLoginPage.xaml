@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ViewModel="clr-namespace:XD_XamarinLoveXDPart1.ViewModels"
+             xmlns:Custom="clr-namespace:XD_XamarinLoveXDPart1.Customs"
+             x:Class="XD_XamarinLoveXDPart1.Views.GeneralLoginPage"
+             NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.BindingContext>
+        <ViewModel:MainViewModel/>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        
+        <Grid>
+            
+            <Image Source="backgroundMainImage.png"
+                   Aspect="AspectFill"/>
+            
+            <ScrollView>
+                
+                <StackLayout Margin="16,0,16,0">
+
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Image Grid.Row="0" 
+                               Source="logoMain.png"
+                               Margin="0,18,0,0"
+                               HeightRequest="125"/>
+
+                        <StackLayout Grid.Row="1"
+                                     Margin="0,46,0,0">
+
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="user.png"/>
+                                <Custom:SimpleCustomEntry Placeholder="User"
+                                                          PlaceholderColor="#F4F1F2"
+                                                          TextColor="#F4F1F2"
+                                                          FontSize="16"
+                                                          Margin="-17,0,-22,0"
+                                                          HorizontalOptions="FillAndExpand"/>
+                                <Image Source="error.png"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal"
+                                         Margin="0,19,0,0">
+                                <Image Source="password.png"/>
+                                <Custom:SimpleCustomEntry Placeholder="Password"
+                                                          PlaceholderColor="#F4F1F2"
+                                                          TextColor="#F4F1F2"
+                                                          FontSize="16"
+                                                          IsPassword="True"
+                                                          Margin="-17,0,-22,0"
+                                                          HorizontalOptions="FillAndExpand"/>
+                                <Image Source="success.png"/>
+                            </StackLayout>
+
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="3"
+                                     Spacing="26"
+                                     Margin="0,34,0,0">
+                            <Custom:SimpleCustomButton Text="SIGN"
+                                                       Margin="71,0,71,0"
+                                                       FontSize="16"
+                                                       TextColor="#F4F1F2"/>
+                            <StackLayout Orientation="Horizontal"
+                                         Margin="44,-1,44,0">
+                                <Label Text="Forgot Password?"
+                                       FontSize="14"
+                                       TextColor="#F4F1F2"
+                                       HorizontalOptions="StartAndExpand">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer 
+                                            Command="{Binding ForgotPasswordCommnand}"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Label Text="Register"
+                                       FontAttributes="Bold"
+                                       FontSize="14"
+                                       TextColor="#F4F1F2"
+                                       HorizontalOptions="EndAndExpand">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding RegisterCommand}"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <Image Grid.Row="4"
+                               x:Name="btnINFORMATION"
+                               Source="information.png"
+                               Margin="0,22,0,0"
+                               HorizontalOptions="End"
+                               HeightRequest="54">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer 
+                                    Command="{Binding InformationMainCommand}"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Grid>
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
