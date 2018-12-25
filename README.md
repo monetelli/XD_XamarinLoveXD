@@ -1,5 +1,5 @@
 # XF_XamarinLoveXD
-[![Open Source Love png1](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](#Open-Source-Love) [![Build status](https://ci.appveyor.com/api/projects/status/jw0jkhditm0gckeo?svg=true)](https://ci.appveyor.com/project/monetelli/xd-xamarinlovexd) [![licence](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/monetelli/XD_XamarinLoveXD/blob/master/LICENSE.md)
+[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](#Open-Source-Love) [![Build status](https://ci.appveyor.com/api/projects/status/jw0jkhditm0gckeo?svg=true)](https://ci.appveyor.com/project/monetelli/xd-xamarinlovexd) [![licence](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/monetelli/XD_XamarinLoveXD/blob/master/LICENSE.md)
 
 ## Description
 
